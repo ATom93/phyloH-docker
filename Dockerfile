@@ -5,8 +5,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl python-pip
 apt-get clean && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN pip install --upgrade pip && \
-pip install python-keystoneclient python-swiftclient numpy Biopython pandas ete2 pyshp geojson 
+RUN pip install python-keystoneclient python-swiftclient numpy Biopython pandas ete2 pyshp geojson 
 
 RUN apt-get update && apt-get install -y --no-install-recommends grass-dev grass && \
 apt-get clean && \
